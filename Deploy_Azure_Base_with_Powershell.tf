@@ -27,7 +27,7 @@ resource "azurerm_resource_group" "rg" {
 # Fetch the ARM Template from GitHub
 ###############################
 data "http" "arm_template" {
-  url = "https://raw.githubusercontent.com/tomwechsler/arm_templates/master/base-azure.json"
+  url = "#"
 }
 
 ###############################

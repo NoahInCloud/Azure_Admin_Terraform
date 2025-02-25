@@ -46,7 +46,7 @@ data "azurerm_monitor_activity_log" "provider_logs" {
 # Query: Logs with a Specific Caller
 ###############################
 data "azurerm_monitor_activity_log" "caller_logs" {
-  caller      = "tom@tomwechsler.ch"
+  caller      = "Noah@example.io"
   max_records = 10
 }
 
@@ -81,7 +81,7 @@ output "provider_logs" {
 }
 
 output "caller_logs" {
-  description = "Last 10 log entries with caller 'tom@tomwechsler.ch'"
+  description = "Last 10 log entries with caller 'Noah@example.io'"
   value       = data.azurerm_monitor_activity_log.caller_logs.events
 }
 
