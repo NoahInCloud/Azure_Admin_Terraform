@@ -41,10 +41,10 @@ data "azurerm_role_definition" "vm_contributor" {
 }
 
 ###############################
-# Lookup Existing User (tom)
+# Lookup Existing User (NoahinCloud)
 ###############################
-data "azuread_user" "tom" {
-  user_principal_name = "tom@tomwechsler.ch"
+data "azuread_user" "NoahinCloud" {
+  user_principal_name = "Noah@example.io"
 }
 
 ###############################
@@ -57,10 +57,10 @@ data "azurerm_resource_group" "tw_web_rg" {
 ###############################
 # Create a Role Assignment
 ###############################
-resource "azurerm_role_assignment" "tom_vm_contributor" {
+resource "azurerm_role_assignment" "NoahinCloud_vm_contributor" {
   scope              = data.azurerm_resource_group.tw_web_rg.id
   role_definition_id = data.azurerm_role_definition.vm_contributor.id
-  principal_id       = data.azuread_user.tom.object_id
+  principal_id       = data.azuread_user.NoahinCloud.object_id
 }
 
 ###############################
@@ -81,7 +81,7 @@ output "vm_contributor_actions" {
   value       = data.azurerm_role_definition.vm_contributor.permissions[0].actions
 }
 
-output "tom_role_assignment" {
-  description = "The role assignment for tom@tomwechsler.ch on resource group tw-web-rg"
-  value       = azurerm_role_assignment.tom_vm_contributor
+output "NoahinCloud_role_assignment" {
+  description = "The role assignment for Noah@example.io on resource group tw-web-rg"
+  value       = azurerm_role_assignment.NoahinCloud_vm_contributor
 }

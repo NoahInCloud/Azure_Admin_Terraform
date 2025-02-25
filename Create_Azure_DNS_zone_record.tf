@@ -17,7 +17,7 @@ variable "location" {
 
 variable "dns_zone_name" {
   description = "DNS zone name"
-  default     = "tomwechsler.xyz"
+  default     = "Noah@example.io"
 }
 
 variable "dns_record_name" {

@@ -31,7 +31,7 @@ variable "subscription_id" {
 
 variable "target_user_upn" {
   description = "User principal name of the target user to receive the custom role"
-  default     = "tim.taylor@tomwechsler.xyz"
+  default     = "Noah@example.io"
 }
 
 # Generate a random GUID to use as the custom role's ID.

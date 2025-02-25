@@ -100,7 +100,7 @@ resource "azurerm_key_vault_certificate" "cert" {
       content_type = "application/x-pkcs12"
     }
     x509_certificate_properties {
-      subject            = "CN=www.tomwechsler.ch"
+      subject            = "CN=Noah@example.io"
       validity_in_months = 12
     }
   }

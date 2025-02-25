@@ -14,7 +14,7 @@ provider "azuread" {}
 ###############################
 variable "domain" {
   description = "The domain used for the user principal name"
-  default     = "wechsler.onmicrosoft.com"
+  default     = "Example.onmicrosoft.com"
 }
 
 variable "user_password" {

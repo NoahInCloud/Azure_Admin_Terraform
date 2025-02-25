@@ -21,18 +21,18 @@ resource "azurerm_management_group" "contoso" {
   display_name = "Contoso"
 }
 
-# Create a management group named "TomRocks"
-# (Initially you might have set the display name to "TomRocks Group"; here we declare it as "Wechsler Group" to represent an update.)
-resource "azurerm_management_group" "tomrocks" {
-  group_id     = "TomRocks"
+# Create a management group named "NoahinCloud"
+# (Initially you might have set the display name to "NoahinCloud Group"; here we declare it as "Wechsler Group" to represent an update.)
+resource "azurerm_management_group" "NoahinCloud" {
+  group_id     = "NoahinCloud"
   display_name = "Wechsler Group"
 }
 
-# Create a child management group under "TomRocks"
-resource "azurerm_management_group" "tomrockssubgroup" {
-  group_id                   = "TomRocksSubGroup"
-  display_name               = "TomRocksSubGroup"
-  parent_management_group_id = azurerm_management_group.tomrocks.id
+# Create a child management group under "NoahinCloud"
+resource "azurerm_management_group" "NoahinCloudsubgroup" {
+  group_id                   = "NoahinCloudSubGroup"
+  display_name               = "NoahinCloudSubGroup"
+  parent_management_group_id = azurerm_management_group.NoahinCloud.id
 }
 
 ###############################

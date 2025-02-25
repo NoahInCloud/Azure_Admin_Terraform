@@ -11,7 +11,7 @@ provider "azuread" {}
 
 variable "domain" {
   description = "The domain for user principal names"
-  default     = "wechsler.onmicrosoft.com"
+  default     = "Example.onmicrosoft.com"
 }
 
 resource "azuread_user" "fred_prefect" {

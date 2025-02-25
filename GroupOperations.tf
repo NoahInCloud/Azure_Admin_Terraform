@@ -25,7 +25,7 @@ resource "azuread_group" "fred_group" {
 ###############################
 data "azuread_user" "fred_prefect" {
   # Adjust the user principal name as needed.
-  user_principal_name = "frPrefect@wechsler.onmicrosoft.com"
+  user_principal_name = "frPrefect@Example.onmicrosoft.com"
 }
 
 ###############################

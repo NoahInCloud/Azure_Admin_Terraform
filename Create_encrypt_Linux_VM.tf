@@ -35,7 +35,7 @@ variable "vm_name" {
 
 variable "admin_username" {
   description = "Admin username for the VM"
-  default     = "tom"
+  default     = "NoahinCloud"
 }
 
 variable "admin_password" {
