@@ -185,8 +185,8 @@ resource "azurerm_virtual_machine_scale_set_extension" "custom_script" {
   type                         = "CustomScriptExtension"
   type_handler_version         = "1.8"
   settings = jsonencode({
-    "fileUris"         = ["https://raw.githubusercontent.com/Azure-Samples/compute-automation-configurations/master/automate-iis.ps1"],
-    "commandToExecute" = "powershell -ExecutionPolicy Unrestricted -File automate-iis.ps1"
+    "fileUris"         = ["#"],
+    "commandToExecute" = "powershell -ExecutionPolicy Unrestricted -File automate-iis.tf"
   })
 }
 

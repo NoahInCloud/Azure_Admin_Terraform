@@ -1,5 +1,5 @@
 data "external" "usage_details" {
-  program = ["pwsh", "-File", "./get_usage_details.ps1"]
+  program = ["pwsh", "-File", "./get_usage_details.tf"]
 
   query = {
     start_date = formatdate("2006-01-02", timeadd(timestamp(), "-720h"))
